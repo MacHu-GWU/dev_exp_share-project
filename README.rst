@@ -50,22 +50,3 @@
 
 Welcome to ``dev_exp_share`` Documentation
 ==============================================================================
-Documentation for ``dev_exp_share``.
-
-
-.. _install:
-
-Install
-------------------------------------------------------------------------------
-
-``dev_exp_share`` is released on PyPI, so all you need is to:
-
-.. code-block:: console
-
-    $ pip install dev-exp-share
-
-To upgrade to latest version:
-
-.. code-block:: console
-
-    $ pip install --upgrade dev-exp-share
