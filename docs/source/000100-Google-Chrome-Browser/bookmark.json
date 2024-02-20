@@ -1,0 +1,23 @@
+{
+    "my first link": {
+        "type": "link",
+        "url": "http://example.com"
+    },
+    "my second link": {
+        "type": "link",
+        "url": "http://example.com"
+    },
+    "my folder": {
+        "type": "folder",
+        "children": {
+            "my third link": {
+                "type": "link",
+                "url": "http://example.com"
+            },
+            "my fourth link": {
+                "type": "link",
+                "url": "http://example.com"
+            }
+        }
+    }
+}

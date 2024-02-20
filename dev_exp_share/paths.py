@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pathlib import Path
+from pathlib_mate import Path
 
 dir_here = Path(__file__).absolute().parent
 PACKAGE_NAME = dir_here.name
@@ -20,3 +20,5 @@ bin_pytest = dir_venv_bin / "pytest"
 dir_htmlcov = dir_project_root / "htmlcov"
 path_cov_index_html = dir_htmlcov / "index.html"
 dir_unit_test = dir_project_root / "tests"
+
+dir_doc_source = dir_project_root / "docs" / "source"
