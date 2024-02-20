@@ -8,8 +8,12 @@
 
 from .paths import dir_doc_source
 
-start = 1
 step = 100
+
+
+def normalize_title(title: str) -> str:
+    words = [word.strip() for word in title.split() if word.strip()]
+    return "-".join(words)
 
 
 def main():
@@ -25,8 +29,9 @@ def main():
         if parts[0].isdigit():
             title = parts[1]
         else:
-            title= p_dir.basename
+            title = p_dir.basename
         i += 1
         seq = i * step
+        title = normalize_title(title)
         new_basename = f"{seq:06d}-{title}"
         p_dir.moveto(new_basename=new_basename)
