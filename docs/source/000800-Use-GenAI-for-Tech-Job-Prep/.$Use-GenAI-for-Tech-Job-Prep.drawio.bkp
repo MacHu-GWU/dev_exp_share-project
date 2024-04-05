@@ -1,0 +1,16 @@
+<mxfile host="Electron" modified="2024-03-11T20:50:23.305Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="kDCnH5xZa3IcYMbHTAeg" version="23.1.5" type="device">
+  <diagram name="Page-1" id="Z5yRERDCvPzVHA3BaCrT">
+    <mxGraphModel dx="956" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6CWqcNsJZPnraRdVYqWE-1" value="根据 Job Description, 返回至少 10 个 Project Experience 或是 Behavior Question 问题. 两种类型的问题的比例多少由 Job Description 决定" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="160" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6CWqcNsJZPnraRdVYqWE-2" value="根据 Job Title 和 Job Description, 在我们的后台所有支持的 Title 中返回至少 3 个相近的 Title, 然后要用户选择, 确保后续的对话都是在这个指定的 Title 之下的." style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="200" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

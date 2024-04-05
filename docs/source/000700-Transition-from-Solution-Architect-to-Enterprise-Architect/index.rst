@@ -90,6 +90,15 @@ I am an Principal AWS Solution Architect. I am transitioning to a new role calle
 - SA 的工作日常内容多为原型设计, 代码实现. 而 EA 的工作日常多为企业需求, 和各个技术部门的头开会, 以及制定技术战略, 以及 Roadmap.
 
 
+Write Guidance
+------------------------------------------------------------------------------
+- Designs, plans, and implements enterprise-wide systems and solutions.
+- Collaborates with stakeholders to understand business needs.
+- Creates holistic solutions by integrating multiple technologies.
+- Works with developers to ensure correct system implementation.
+- Selects and implements enterprise-wide solutions.
+
+
 How to be a good EA - High Level
 ------------------------------------------------------------------------------
 Good. I am trying to come up with an framework to use in my day to day enterprise architecture work.
