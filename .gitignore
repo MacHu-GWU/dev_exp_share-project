@@ -1,6 +1,7 @@
 # User Settings
 dev_exp_share.egg-info/
 tmp/
+.drawio.bkp
 
 
 # Byte-compiled / optimized / DLL files
