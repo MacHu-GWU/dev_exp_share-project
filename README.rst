@@ -50,4 +50,7 @@
 
 Welcome to ``dev_exp_share`` Documentation
 ==============================================================================
+.. image:: https://dev-exp-share.readthedocs.io/en/latest/_static/dev_exp_share-logo.png
+    :target: https://dev-exp-share.readthedocs.io/en/latest/
+
 这个项目是我个人的 IT 职业生涯中所有的技术博客的合集的文档网站. 我还有很多细分主题的技术博客, 例如 AWS 技术, Big Data 技术等, 它们都有各自的 Git Repo. 所有不属于任何细分主题的技术博客都会放在这个项目中.
