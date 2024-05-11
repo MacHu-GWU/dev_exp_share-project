@@ -1,3 +1,5 @@
+.. _hudi-writer-how-it-works:
+
 Hudi Writer How it Works
 ==============================================================================
 本文将深入探究 Hudi 到底是如何实现 Upsert 的. 在写入文件的过程中到底做了什么?
@@ -46,7 +48,7 @@ Hudi Table Folder Structure
 
 **File Group**
 
-由于 Hudi 会定期做 Compaction (将小文件合并成大文件), 所以 Hudi 在 Partition 下面又创造了 File Group 概念. 第一次写入数据时, 会生成一个 File Group. 在后续数据持续写入 判断该 File Group 的 DataFiles 文件是否超出一个设定的阈值大小 (可以是文件总大小也可以是文件数量), 未超出则在此 File Group 中继续写入数据文件. 超出阈值就会重新生成一个新的 File Group. 而后来的系统优化 Compaction 实际上就是将 File Group 中的所有文件合并成大文件.
+由于 Hudi 会定期做 Compaction (将小文件合并成大文件), 所以 Hudi 在 Partition 下面又创造了 File Group 概念. 第一次写入数据时, 会生成一个 File Group. 在后续数据持续写入 判断该 File Group 的 DataFiles 文件是否超出一个设定的阈值大小 (可以是文件总大小也可以是文件数量, 默认是 120MB), 未超出则在此 File Group 中继续写入数据文件. 超出阈值就会重新生成一个新的 File Group. 而后来的系统优化 Compaction 实际上就是将 File Group 中的所有文件合并成大文件.
 
 **Base File**
 
@@ -73,7 +75,10 @@ Reference:
 - `Index <https://hudi.apache.org/docs/concepts/#index>`_
 
 ``s3://bucket/root/${yyyy-mm-dd-1}/7b7afd5e-3b00-4ded-beed-caa155cf1d1b-0_0-0-0_20220726183745.parquet`` 数据文件中的
+.. code-block:: python
 
+    7b7afd5e-3b00-4ded-beed-caa155cf1d1b_20220726183745_1.log
+    ${FileGroupId}-${WriteToken}-${LogVersion}.log
 
 COW
 ------------------------------------------------------------------------------
