@@ -13,6 +13,7 @@ CCPA 全称 California Consumer Privacy Act, 是美国加州于2018年通过的�
 
 GDPR 全称 General Data Protection Regulation, 是欧盟制定的数据保护条例. 2018年5月正式生效, 被称为史上最严格的数据保护法案. GDPR 适用于所有处理欧盟公民个人数据的企业, 无论企业所在地区. 它要求企业以"设计和默认"的方式进行数据保护, 并赋予了数据主体许多权利, 如知情权, 访问权, 删除权等. 
 
+
 Feature Requirements to be CCPA and GDPR Compliant
 ------------------------------------------------------------------------------
 为满足 CCPA 和 GDPR 合规要求, 数据平台需具备以下关键功能:
