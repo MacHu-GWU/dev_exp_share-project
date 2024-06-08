@@ -1,3 +1,5 @@
+.. _ccpa-and-gdpr-compliance-in-data-industry:
+
 CCPA and GDPR Compliance in Data Industry
 ==============================================================================
 

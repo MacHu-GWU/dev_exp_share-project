@@ -1,3 +1,5 @@
+.. _worm-compliance-in-data-industry:
+
 WORM Compliance in Data Industry
 ==============================================================================
 
