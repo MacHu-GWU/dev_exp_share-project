@@ -8,7 +8,7 @@ This article kicks off our Data Compliance series, designed to provide a compreh
 .. dropdown:: Data Compliance Series Links
 
     - :ref:`data-compliance-overview-en`
-    - :ref:`ccpa-and-gdpr-compliance-in-data-industry`
+    - :ref:`ccpa-and-gdpr-compliance-in-data-industry-en`
     - :ref:`worm-compliance-in-data-industry-en`
 
 
