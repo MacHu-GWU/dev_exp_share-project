@@ -5,6 +5,7 @@ Data Compliance Overview
 本文是 Data Compliance 数据合规系列文章中的第一篇.
 
 .. dropdown:: 数据合规系列文章链接
+    :open:
 
     - :ref:`data-compliance-overview`
     - :ref:`ccpa-and-gdpr-compliance-in-data-industry`

@@ -6,6 +6,7 @@ Data Compliance Overview EN
 This article kicks off our Data Compliance series, designed to provide a comprehensive understanding of data compliance in the modern business landscape.
 
 .. dropdown:: Data Compliance Series Links
+    :open:
 
     - :ref:`data-compliance-overview-en`
     - :ref:`ccpa-and-gdpr-compliance-in-data-industry-en`
