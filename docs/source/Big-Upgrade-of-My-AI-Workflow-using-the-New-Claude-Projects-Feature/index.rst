@@ -1,4 +1,4 @@
-How I Enhance Claude Projects
+Big Upgrade of My AI Workflow using the New Claude Projects Feature
 ==============================================================================
 注: 本文就是用文中提到的新工作流在 AI 的帮助下生成的. 从构思到定稿共计花费了 10 分钟.
 
