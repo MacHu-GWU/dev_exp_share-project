@@ -5,14 +5,39 @@ Keywords:
 
 Overview
 ------------------------------------------------------------------------------
-`DVC (Data Version Control) <https://dvc.org/>`_  是一个 2017 年开始的开源项目, 起初是为了解决 Machine Learning 中对 dataset 进行管理的痛点而创立的开源项目. 后来作者团队成立了创业公司开始基于这个产品做了很多 ML 生态链的创新, 开发了更多的工具和服务. 目前所支持的所有功能可以在官网的 `Use Case <https://dvc.org/doc/use-cases>`_ 下看到 (从 "Versioning Data and Models" 开始往下看).
+`DVC (Data Version Control) <https://dvc.org/>`_ 是一个 2017 年开始的开源项目, 起初是为了解决 Machine Learning 中对 dataset 进行管理的痛点而创立的开源项目. 后来作者团队成立了创业公司开始基于这个产品做了很多 ML 生态链的创新, 开发了更多的工具和服务. 目前所支持的所有功能可以在官网的 `Use Case <https://dvc.org/doc/use-cases>`_ 下看到 (从 "Versioning Data and Models" 开始往下看).
 
 
-Data Version Control
+Source code Version Control (SVC) vs Data Version Control (DVC)
 ------------------------------------------------------------------------------
-这是 DVC 起家的杀手功能. 官方称它是一个类似于 Git, 用于管理 dataset 版本的工具. 它本质是一个带命令行界面的 Python 库.
+大部分开发者对 SVC 已经相当熟悉了, 这里我们来快速介绍一下 SVC 和 DVC 系统的区别.
 
-跟 Git 对比可知, Git 本质上是追踪每一个文件的变化, 每一个 commit 都会追踪一整个 Repo (目录) 下的所有文件变化. 而 DVC 也是类似, DVC 会将一个目录下的所有文件视为一个 Dataset, 用跟 Git 类似的方式将其管理起来. DVC 一样也会用 hash 追踪文件的变化, 对没有变化的文件则只保存引用, 而不会重复存储. DVC 底层跟各种云存储服务集成, 可以将历史记录数据库跟云端同步, 解放硬盘空间.
+在 SVC 系统中, 这里我们主要说 Git, 源代码一般会被视为许多纯文本文件, 在 Git 仓库内部中会保存所有文件的每个历史版本的拷贝. 你 Clone 仓库的时候也会把这些历史版本全部 pull 下来. 对于源代码来说, 由于文件体积较小, 就算有几万个版本最终也不会占用太大的空间. 更何况有只 checkout 最近一段时间的历史版本, 这样总体积依然是可控的.
+
+而对于 Data 文件而言, 如果你在 Git 中保存每个历史版本, 那么很快 Git 仓库的大小就会变得非常大, 使得你 Clone 一次下来要下载大量数据. 就算你 checkout 最近一段时间的历史版本, 数据量依然很大.
+
+所以一般 DVC 系统的核心就是用更为专用的存储, 通常是 Object Store, 来替换掉 Git 内部的那个数据库系统. 而使得每次 Clone 或者 checkout 的时候, 只是 checkout 对这个 Object 的引用, 而不是数据本身, 只有真正需要读数据的时候才会去下载数据.
+
+
+Existing Data Version Control
+------------------------------------------------------------------------------
+Git 有一个 LFS (Large File System) 的功能, 它就实现了上一节提到的, 在 Git 仓库中只保存指针, 不保存数据的功能. 这一定程度上解决了 DVC 的问题.
+
+还有很多 File Version System 也是可以解决 DVC 的问题, 例如 AWS S3 的 version 就可以追踪同一个对象的不同版本. 还有很多 Artifacts Store 也能追踪同一个文件的不同版本, 一定程度上也解决了 DVC 问题.
+
+既然已经有了这些解决方案, 那为什么还要做一个 `DVC (Data Version Control) <https://dvc.org/>`_ 这样专门的工具呢? 从下一章起我们详细说说这一点.
+
+
+Why We Need DVC
+------------------------------------------------------------------------------
+Git LFS 系统是一个针对文件版本管理的一个更通用的工具. 而 File Version System 往往是一个跟计算引擎和后端存储高度绑定的工具, 例如你选了 S3 就必须用 S3, 你选了 Artifacts Store (例如 JFrog) 就必须用 JFrog. 而 DVC 则是一个针对数据科学和机器学习领域一个更加优化的工具. 跟 Git LFS 只能针对文件版本进行管理相比, 它在文件之上还封装了 Data Pipeline, Data Registry, Model Registry, Experiment Tracking 等概念, 使得在实际项目中更易使用. 如果你用 Git LFS 的话你还需要造很多轮子才能支持你的实际项目流程. 此外它的后端存储也更加灵活, 它支持市面上大部分主流云存储空间 (也支持本地文件系统, 用于学习和实验). 举例来说, 你在实际项目中可能有很多数据文件, 这些数据文件按照用途会组成多个 dataset. 而 DVC 原生能对 dataset 而不是单个文件进行版本控制. 而 Git LFS 则是把一个目录下的所有文件都当成一个整体来版本控制了. 显然 DVC 更加适合实际项目.
+
+
+How DVC Works - The Fundamental
+------------------------------------------------------------------------------
+DVC 和 Git 类似, 对单个文件进行版本控制. 例如你有一个 ``data.csv``, 那么 DVC 就会把这个文件的 metadata 保存在 ``data.csv.dvc`` 文件中. 而这个 ``data.csv.dvc`` 文件则是会被 Git 进行版本控制的. 所以说你 checkout 了 Git 的某个版本, 也就 checkout 了 ``data.csv.dvc``, 然后你用 ``dvc checkout`` 就可以 checkout ``data.csv`` 文件了.
+
+这是 DVC 最底层的原理, 而后面所有的高级功能本质上都是建立在最细粒度的单个文件版本控制之上. DVC 不支持逐行对比, 也不支持对二进制文件的差异对比 (没有必要).
 
 
 CI/CD For Machine Learning
