@@ -1,0 +1,5 @@
+pynamodb>=6.0.0,<7.0.0
+pynamodb_mate>=6.0.0.4,<7.0.0.0
+moto>=5.0.0,<6.0.0
+polars>=1.0.0,<2.0.0
+rich
