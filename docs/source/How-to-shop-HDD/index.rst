@@ -20,14 +20,21 @@ Available Options
 - External, 外置, 自带硬盘盒, 有自己独立的电源, 通过 USB 或者其他接口跟电脑连接), 一般 External 的本质是一个 Internal 硬盘 + 一个硬盘盒, 所以同等价位和性能 External 肯定要更贵, 并且读写速度受到数据线 (USB 或 Thunderbolt) 的限制, 一般比不上 Internal 跟电脑直接用 PCIe 总线的速度.
 - Portable, 便携, 也就是移动硬盘.
 
-所以两者合起来看就有大约 2*3, 六种产品类型.
+所以两者合起来看就有大约 2*3, 六种产品类型. 从应用场景的角度看, 它们的应用场景如下:
 
-而每一种产品类型一般又分不同的系列, 根据其读写性能, 容量大小, 可靠程度, 有没有为特定场景优化 (例如游戏, 图像, 数据, 小文件) 又分很多种.
+1. 内置 SSD (Internal SSD): 适用于需要高速读写的场景. 例如: 作为系统盘, 存储常用软件和游戏, 或用于视频编辑等需要快速数据处理的工作.
+2. 外置 SSD (External SSD): 适用于需要高速便携存储的场景. 例如: 移动工作站的扩展存储, 高清视频编辑的工作盘, 或需要快速数据传输的场合.
+3. 便携 SSD (Portable SSD): 适用于需要高速随身存储的场景. 例如: 频繁在不同设备间传输大文件, 户外视频直播的存储设备, 或需要快速读写的移动游戏存储.
+4. 内置 HDD (Internal HDD): 适用于需要大容量存储但对速度要求不高的场景. 例如: 存储大量视频, 音乐, 文档等静态文件, 或作为家庭NAS的存储介质.
+5. 外置 HDD (External HDD): 适用于需要大容量便携存储的场景. 例如: 大型文件备份, 影视工作者的素材存储, 或作为家庭媒体库的扩展存储.
+6. 便携 HDD (Portable HDD): 适用于需要随身携带大量数据的场景. 例如: 学生存储课程资料, 旅行摄影师存储照片和视频, 或商务人士携带大量文档.
+
+而每一种产品类型一般又分不同的系列, 根据其读写性能, 容量大小, 可靠程度, 有没有为特定场景优化 (例如游戏, 图像, 数据, 小文件) 又分很多种. 这里就不冗述了.
 
 
 Quick Links
 ------------------------------------------------------------------------------
-对于以上 6 种产品类型, 我以 Western Digital 西部数据为例 (它们 2016 年收购了 Sandisk 移动 SSD 的新锐厂商), 用它们官网的对每种产品类型下的不同的型号的产品的介绍来作为参考.
+对于以上 6 种产品类型, 我以 Western Digital 西部数据为例 (它们 2016 年收购了 Sandisk 移动 SSD 的新锐厂商), 用它们官网的对每种产品类型下的不同的型号的产品的介绍来作为参考. 我建议在真正选购时, 根据自己的需求确定要买哪一种产品, 然后到对应的厂商官网产品线的页面中了解它们有哪些产品和型号, 然后再去对比价格, 参数, 最终决定自己的购买.
 
 - `Learn more about SSD <https://shop.sandisk.com/solutions/solid-state-drives>`_
 - `Compare Internal SSD <https://shop.sandisk.com/solutions/solid-state-drives/internal-ssds>`_
@@ -37,8 +44,6 @@ Quick Links
 - `Compare Internal HDD <https://www.westerndigital.com/solutions/hard-drives/internal-hdd>`_
 - `Compare External HDD <https://www.westerndigital.com/solutions/hard-drives/external-hdd>`_
 - `Compare Portable HDD <https://www.westerndigital.com/solutions/hard-drives/portable-hdd>`_
-
-- `Learn more about NAS <https://www.westerndigital.com/solutions/network-attached-storage>`_
 
 
 Western Digital Internal HDD
