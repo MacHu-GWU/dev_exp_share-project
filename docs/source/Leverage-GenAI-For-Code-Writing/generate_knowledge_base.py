@@ -108,12 +108,12 @@ def generate_test_cases_knowledge_base(
 
 dir_out = dir_here / "tmp"
 reset_dir_out(dir_out)
-dir_project_root = Path.home() / "Documents" / "GitHub" / "jsonpolars-project"
+dir_project_root = Path.home() / "Documents" / "GitHub" / "s3manifesto-project"
 
 # generate_source_code_knowledge_base
-dir_src = dir_project_root / "jsonpolars"
+dir_src = dir_project_root / "s3manifesto"
 generate_source_code_knowledge_base(
-    project_name="jsonpolars",
+    project_name="s3manifesto",
     dir_src=dir_src,
     dir_out=dir_out,
     glob="**/*.py",
@@ -126,7 +126,7 @@ generate_source_code_knowledge_base(
 # generate_source_code_knowledge_base
 dir_src = dir_project_root / "tests"
 generate_test_cases_knowledge_base(
-    project_name="jsonpolars",
+    project_name="s3manifesto",
     dir_src=dir_src,
     dir_out=dir_out,
     glob="**/*.py",
