@@ -10,7 +10,8 @@ Voice Doc AI Workflow
 
 .. note::
 
-    所有的 AI 对话都是用 ChatGPT 进行语音转文字, 然后在 Claude 中进行处理.
+    - 所有的 AI 对话都是用 ChatGPT 进行语音转文字, 然后在 Claude 中进行处理.
+    - 这篇文档中的 Input 是我们的输入, Output 是 AI 的输出.
 
 
 1. 创建 Claude Project
