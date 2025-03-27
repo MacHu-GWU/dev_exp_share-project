@@ -373,3 +373,8 @@ Initial Datalake
 CDC Data Pipeline
 
 - UPSERT: 更新插入操作, 如果记录存在则更新, 不存在则插入.
+
+.. literalinclude:: ./code_snippets.py
+   :language: python
+   :linenos:
+

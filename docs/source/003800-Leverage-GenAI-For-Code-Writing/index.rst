@@ -4,6 +4,10 @@ This blog post explores how to use Generative AI (GenAI) to produce functional c
 
 This blog is hosted at: https://dev-exp-share.readthedocs.io/en/latest/search.html?q=Leverage+GenAI+For+Code+Writing&check_keywords=yes&area=default
 
+.. note::
+
+    2025-03-03 update, I created a better tool called `docpack <https://github.com/MacHu-GWU/docpack-project>`_ that can replace this workflow. However, I still want to keep this post here for reference.
+
 
 Sample Use Case
 ------------------------------------------------------------------------------

@@ -27,3 +27,24 @@ CodeCov
 ReadTheDocs
 ------------------------------------------------------------------------------
 这是一个开源文档托管的服务商. 你在 https://readthedocs.org/accounts/tokens/ 下可以看到创建 token 的选项. 我习惯将 token 保存在 ``${HOME}/.readthedocs/${OWNER_USERNAME}/${TOKEN_NAME}.txt`` 文件中. 注意, Readthedocs 的 Owner Username 就是你 readthedocs 的 username, 而不是 GitHub 等代码仓库托管系统的 username. Readthedocs 官方没有 token name, 你要自己定义. 例如 ``~/.readthedocs/MacHu-GWU/sanhe-dev.txt``.
+
+
+Google
+------------------------------------------------------------------------------
+`Google Cloud <https://cloud.google.com/>`_ 有一系列 API 可以控制各种 Google 产品例如 gmail, google drive 或者和 Google Cloud Service 联动. 由于 Google Account 下的管理方式一般是以 Project 为单位管理的, 并且通常有 OAuth Clients 和 Service Account 两种 Credentials, 我习惯将 token 用下面的目录结构进行保存:
+
+.. code-block:: bash
+
+    ${HOME}/.google/${Google_Account_Username_or_Alias}/${project_name}/
+    ${HOME}/.google/${Google_Account_Username_or_Alias}/${project_name}/service_accounts/${Service_Account_Name_or_Alias}/keys/${key_name}.json
+    ${HOME}/.google/${Google_Account_Username_or_Alias}/${project_name}/clients/${client_name_or_alias}/client_secret.json
+    ${HOME}/.google/${Google_Account_Username_or_Alias}/${project_name}/clients/${client_name_or_alias}/client_token.json
+
+
+Cloudflare
+------------------------------------------------------------------------------
+`Cloudflare <https://www.cloudflare.com/>`_ 是一个 CDN 服务商, 也是一个云计算服务提供商, 它提供了很多免费但是完全不差 AWS 的对标服务. 我习惯将 token 用下面的目录结构进行保存:
+
+.. code-block:: bash
+
+    ${HOME}/.cloudflare/${Cloudflare_Account_name_or_alias}/${key_type_such_as_api_token_r2_token_etc}/${key_name}.txt
